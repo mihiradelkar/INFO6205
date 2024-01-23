@@ -21,10 +21,10 @@ public class RandomWalk {
      */
     private void move(int dx, int dy) {
         // TO BE IMPLEMENTED  do move
-
-
+        x += dx;
+        y += dy;
         // SKELETON
-         throw new RuntimeException("Not implemented");
+//          throw new RuntimeException("Not implemented");
         // END SOLUTION
     }
 
@@ -34,10 +34,10 @@ public class RandomWalk {
      * @param m the number of steps the drunkard takes
      */
     private void randomWalk(int m) {
-        // TO BE IMPLEMENTED 
+        // TO BE IMPLEMENTED
+        for (int i = 0; i < m; i++) randomMove();
 
-
-throw new RuntimeException("implementation missing");
+        // throw new RuntimeException("implementation missing");
     }
 
     /**
@@ -45,9 +45,9 @@ throw new RuntimeException("implementation missing");
      * That's to say, moves can be (+-1, 0) or (0, +-1).
      */
     private void randomMove() {
-        boolean ns = random.nextBoolean();
+        boolean ns = random.nextBoolean(); 
         int step = random.nextBoolean() ? 1 : -1;
-        move(ns ? step : 0, ns ? 0 : step);
+        move(ns ? step : 0, ns ? 0 : step); //
     }
 
     /**
@@ -57,9 +57,9 @@ throw new RuntimeException("implementation missing");
      */
     public double distance() {
         // TO BE IMPLEMENTED 
-
         // SKELETON
-         return 0.0;
+        return Math.sqrt(x * x + y * y);
+        //  return 0.0;
         // END SOLUTION
     }
 
@@ -76,6 +76,7 @@ throw new RuntimeException("implementation missing");
             RandomWalk walk = new RandomWalk();
             walk.randomWalk(m);
             totalDistance = totalDistance + walk.distance();
+            // System.out.println("total Distance: "+totalDistance);
         }
         return totalDistance / n;
     }

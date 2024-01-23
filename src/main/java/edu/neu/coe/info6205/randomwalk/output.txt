@@ -1,0 +1,71 @@
+Random Walk for 10 vales of m
+2 steps: 1.2209138999323175 over 30 experiments
+4 steps: 1.714884963587676 over 30 experiments
+8 steps: 1.9168674302174435 over 30 experiments
+16 steps: 3.8905379487625784 over 30 experiments
+32 steps: 5.8164089003148565 over 30 experiments
+64 steps: 8.390748989962523 over 30 experiments
+128 steps: 11.563363467899627 over 30 experiments
+256 steps: 10.60127862008043 over 30 experiments
+512 steps: 21.708935593535315 over 30 experiments
+1024 steps: 28.70064886229621 over 30 experiments
+
+Random Walk for 10 vales of m
+2 steps: 0.9071067811865478 over 30 experiments
+4 steps: 1.2983990772768759 over 30 experiments
+8 steps: 2.0455912495648647 over 30 experiments
+16 steps: 3.487070871573296 over 30 experiments
+32 steps: 4.557126555482621 over 30 experiments
+64 steps: 6.039413149717348 over 30 experiments
+128 steps: 8.69195406867294 over 30 experiments
+256 steps: 14.80150434658092 over 30 experiments
+512 steps: 20.557799561799268 over 30 experiments
+1024 steps: 25.470550741614684 over 30 experiments
+
+Random Walk for 10 vales of m
+2 steps: 1.3266329957741108 over 30 experiments
+4 steps: 1.4677445115085728 over 30 experiments
+8 steps: 2.6555929393576236 over 30 experiments
+16 steps: 3.037605673567159 over 30 experiments
+32 steps: 5.176114980842468 over 30 experiments
+64 steps: 6.134075119373802 over 30 experiments
+128 steps: 11.429078449846083 over 30 experiments
+256 steps: 14.69597462884512 over 30 experiments
+512 steps: 19.444888050295123 over 30 experiments
+1024 steps: 28.760531429709626 over 30 experiments
+
+Random Walk for 10 vales of m
+2 steps: 1.0990187582825717 over 30 experiments
+4 steps: 1.850948784694925 over 30 experiments
+8 steps: 2.4311858730253686 over 30 experiments
+16 steps: 3.267473150896146 over 30 experiments
+32 steps: 4.092396575104028 over 30 experiments
+64 steps: 7.183820917658949 over 30 experiments
+128 steps: 10.362459123087246 over 30 experiments
+256 steps: 14.968982962800228 over 30 experiments
+512 steps: 21.62517750192881 over 30 experiments
+1024 steps: 27.1676234714619 over 30 experiments
+
+Random Walk for 10 vales of m
+2 steps: 1.193299662440778 over 30 experiments
+4 steps: 1.4431706022937965 over 30 experiments
+8 steps: 2.222405025694842 over 30 experiments
+16 steps: 4.241123002249768 over 30 experiments
+32 steps: 4.611619094279633 over 30 experiments
+64 steps: 7.433123628251025 over 30 experiments
+128 steps: 8.945055078168696 over 30 experiments
+256 steps: 12.946818086856 over 30 experiments
+512 steps: 21.38526312017346 over 30 experiments
+1024 steps: 21.852113254562575 over 30 experiments
+
+Random Walk for 10 vales of m
+2 steps: 1.154247233265651 over 30 experiments
+4 steps: 1.5876322868078696 over 30 experiments
+8 steps: 2.74069552017044 over 30 experiments
+16 steps: 4.3558191499360515 over 30 experiments
+32 steps: 5.982451393448939 over 30 experiments
+64 steps: 6.2399539452693915 over 30 experiments
+128 steps: 11.258409963435899 over 30 experiments
+256 steps: 14.811130232365274 over 30 experiments
+512 steps: 16.95621678198498 over 30 experiments
+1024 steps: 27.09708620803141 over 30 experiments

@@ -6,7 +6,6 @@ import edu.neu.coe.info6205.util.Utilities;
 
 import java.util.function.Consumer;
 import java.util.function.Supplier;
-import java.util.function.UnaryOperator;
 
 public class ThreeSumBenchmark {
     public ThreeSumBenchmark(int runs, int n, int m) {
@@ -34,16 +33,21 @@ public class ThreeSumBenchmark {
 
     private void benchmarkThreeSum(final String description, final Consumer<int[]> function, int n, final TimeLogger[] timeLoggers) {
         if (description.equals("ThreeSumCubic") && n > 4000) return;
-        // TO BE IMPLEMENTED 
+        // TO BE IMPLEMENTED
 
+        double start;
+        double end;
+        double time=0;
+        start = System.currentTimeMillis();
+        for (int i = 0; i < runs; i++) {
+            function.accept(supplier.get());
+        }
+        end = System.currentTimeMillis();
+        time = (end - start) / runs;
+        timeLoggers[0].log(time, n);
+        timeLoggers[1].log(time, n);
 
-
-
-
-
-
-
-throw new RuntimeException("implementation missing");
+//        throw new RuntimeException("implementation missing");
     }
 
     private final static TimeLogger[] timeLoggersCubic = {

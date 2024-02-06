@@ -1,5 +1,7 @@
 package edu.neu.coe.info6205.util;
 
+import edu.neu.coe.info6205.graphs.BFS_and_prims.StdRandom;
+
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -60,34 +62,52 @@ public class Timer {
      * @return the average milliseconds per repetition.
      */
     public <T, U> double repeat(int n, boolean warmup, Supplier<T> supplier, Function<T, U> function, UnaryOperator<T> preFunction, Consumer<U> postFunction) {
-        // TO BE IMPLEMENTED : note that the timer is running when this method is called and should still be running when it returns.
+//        logger.trace("repeat: with " + n + " runs");
+//        // TO BE IMPLEMENTED : note that the timer is running when this method is called and should still be running when it returns.
+//        for (int i = 0; i < n; i++) {
+//            pause();
+//            T input = supplier.get();
+//            if (preFunction != null) input = preFunction.apply(input);
+//            resume();
+//            U result = function.apply(input);
+////            pause();
+//            pauseAndLap();
+//            if (postFunction != null) postFunction.accept(result);
+//            resume();
+////            lap();
+//        }
+//        pause();
+//        double averageTime = meanLapTime();
+//        resume();
+//        return averageTime;
 
+        logger.trace("repeat: with " + n + " runs");
+        long startTime, endTime;
+        long totalTicks = 0; // Total ticks for the measured function executions
+        for (int i = 0; i < n; i++) {
+            // Execute the pre-function (if any) without timing
+            T input = supplier.get();
+            if (preFunction != null) input = preFunction.apply(input);
 
+            // Time the execution of the main function
+            startTime = getClock();
+            U result = function.apply(input);
+            endTime = getClock();
+            totalTicks += (endTime - startTime); // Accumulate total time for main function
 
+            // Execute the post-function (if any) without timing
+            if (postFunction != null) postFunction.accept(result);
 
+            // Increment lap counter for each iteration
+            laps++;
+        }
+        // Calculate mean time, converting ticks to milliseconds and dividing by the number of iterations
+        double meanTime = toMillisecs(totalTicks) / n;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        // Return the calculated mean time
+        return meanTime;
         // SKELETON
-         return 0;
+        // return 0;
         // END SOLUTION
     }
 
@@ -214,9 +234,9 @@ public class Timer {
      */
     private static long getClock() {
         // TO BE IMPLEMENTED 
-
+        return System.nanoTime();
         // SKELETON
-         return 0;
+//         return 0;
         // END SOLUTION
     }
 
@@ -229,9 +249,9 @@ public class Timer {
      */
     private static double toMillisecs(long ticks) {
         // TO BE IMPLEMENTED 
-
+        return ticks / 1000000.0;
         // SKELETON
-         return 0;
+//         return 0;
         // END SOLUTION
     }
 

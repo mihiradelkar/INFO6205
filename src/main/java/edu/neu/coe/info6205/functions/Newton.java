@@ -52,12 +52,39 @@ public class Newton {
     public static void main(String[] args) {
 
         // Build the Newton's Approximation problem to be solved: cos(x) = x
-        Newton newton = new Newton("cos(x) - x", (double x) -> Math.cos(x) - x, (double x) -> -Math.sin(x) - 1);
+
+        // Define the function
+//        DoubleFunction<Double> f = x -> Math.cos(x) - x;
+//        DoubleFunction<Double> f = x -> x * x - 2;
+//        DoubleFunction<Double> f = x -> x * x * x - 1;
+        DoubleFunction<Double> f = x -> Math.sin(x) - 0.5;
+//        DoubleFunction<Double> f = x -> x * x - 5 * x + 6;
+
+        // Define the derivative
+//        DoubleFunction<Double> df = x -> -Math.sin(x) - 1;
+//        DoubleFunction<Double> df = x -> 2 * x;
+//        DoubleFunction<Double> df = x -> 3 * x * x;
+        DoubleFunction<Double> df = x -> Math.cos(x);
+//        DoubleFunction<Double> df = x -> 2 * x - 5;
+
+        // Create an instance of the Newton class
+//        Newton newton = new Newton("cos(x) - x", f, df);
+//        Newton newton = new Newton("x^2 - 2", f, df);
+//        Newton newton = new Newton("x^3 - 1", f, df);
+        Newton newton = new Newton("sin(x) - 0.5", f, df);
+//        Newton newton = new Newton("x^2 - 5x + 6", f, df);
+
+//        Newton newton = new Newton("cos(x) - x", (double x) -> Math.cos(x) - x, (double x) -> -Math.sin(x) - 1);
 
         // Solve the problem starting with a value of x = 1;
+        double initialGuess = 1.0;
         // requiring a precision of 10^-7;
+        double tolerance = 1E-7;
         // and giving up after 200 tries.
-        Either<String, Double> result = newton.solve(1.0, 200, 1E-7);
+        int maxTries = 5;
+
+//        Either<String, Double> result = newton.solve(1.0, 200, 1E-7);
+        Either<String, Double> result = newton.solve(initialGuess, maxTries, tolerance);
 
         // Process the result
         result.apply(

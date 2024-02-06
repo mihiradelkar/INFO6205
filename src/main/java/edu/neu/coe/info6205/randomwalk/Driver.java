@@ -5,11 +5,16 @@ import edu.neu.coe.info6205.randomwalk.RandomWalk;
 public class Driver {
     public static void main(String[] args) {
         System.out.println("Random Walk for 10 vales of m");
-        int m = 10; //starting value of m
-        for (int i = 0; i < 10; i++) {
+        int m = 2; //starting value of m
+//        for (int i = 0; i < 10; i++) {
+//            // Calling the RandomWalk main method with the current value of m
+//            RandomWalk.main(new String[]{String.valueOf(m)});
+//            m *= 2;
+//        }
+        while (m <= 100) {
             // Calling the RandomWalk main method with the current value of m
             RandomWalk.main(new String[]{String.valueOf(m)});
-            m += 10;
+            m += 2;
         }
     }
 }
